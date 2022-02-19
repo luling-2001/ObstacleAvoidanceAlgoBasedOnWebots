@@ -1,0 +1,529 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.999998170709371 0.0014479306292679219 0.0012498299101156363 4.851147123321369
+  position -0.0899398591984054 9.052989893937477 1.3553422902592245
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorTileSize 0.25 0.25
+}
+WoodenBox {
+  translation -0.754671 0.0496077 -0.0755369
+  rotation -0.7071067811820149 -1.249510379432446e-11 0.7071067811910801 1.1326024991648125e-06
+  name "wooden box 1"
+  size 0.2 0.1 0.3
+  mass 1
+}
+WoodenBox {
+  translation -0.435757 0.0496077 0.79747
+  rotation -0.7071067811820149 -1.249510379432446e-11 0.7071067811910801 1.1326024991648125e-06
+  name "wooden box 1(2)"
+  size 0.3 0.1 0.3
+  mass 1
+}
+WoodenBox {
+  translation -0.938825 0.0496077 -0.582883
+  rotation -0.7071067811820149 -1.249510379432446e-11 0.7071067811910801 1.1326024991648125e-06
+  name "wooden box 1(3)"
+  size 0.3 0.1 0.3
+  mass 1
+}
+WoodenBox {
+  translation -0.805153 0.0496078 1.22498
+  rotation -5.76527e-15 1 -8.00871e-07 -1.5707953071795862
+  name "wooden box 1(1)"
+  size 0.2 0.1 0.3
+  mass 1
+}
+WoodenBox {
+  translation -0.307961 0.0496077 0.455162
+  rotation -0.7071067812011091 -1.2380793882676552e-11 0.7071067811719859 1.1326024992831521e-06
+  name "wooden box 2"
+  size 0.1 0.1 0.1
+  mass 1
+}
+WoodenBox {
+  translation -0.178851 0.0496174 -0.316443
+  rotation -0.999452997362176 -0.02746901452738878 -0.018416278252031515 0.0004043743438861433
+  name "wooden box 3"
+  size 0.1 0.1 0.1
+  mass 1
+}
+WoodenBox {
+  translation 0.0660321 0.0494108 -0.816068
+  rotation -0.999452997362176 -0.02746901452738878 -0.018416278252031515 0.0004043743438861433
+  name "wooden box 3(1)"
+  size 0.1 0.1 0.1
+  mass 1
+}
+WoodenBox {
+  translation 0.875108 0.0494108 -0.626811
+  rotation -0.9997057268578143 -0.015783395687619786 -0.01842129496688612 0.000404269
+  name "wooden box 3(2)"
+  size 0.2 0.1 0.2
+  mass 1
+}
+WoodenBox {
+  translation -0.374701 0.0494108 -0.00433358
+  rotation -0.9997057268578143 -0.015783395687619786 -0.01842129496688612 0.000404269
+  name "wooden box 3(4)"
+  size 0.19 0.1 0.19
+  mass 1
+}
+WoodenBox {
+  translation -0.236168 0.0494108 -1.14105
+  rotation -0.9997057268578143 -0.015783395687619786 -0.01842129496688612 0.000404269
+  name "wooden box 3(3)"
+  size 0.19 0.1 0.19
+  mass 1
+}
+WoodenBox {
+  translation 0.320771 0.0496077 0.179367
+  rotation -0.6138776292686795 -0.496295275491956 0.6138772318695566 1.304610444596459e-06
+  name "wooden box 4"
+  size 0.1 0.1 0.1
+  mass 1
+}
+WoodenBox {
+  translation -0.998559 0.0494235 -1.17805
+  rotation -0.999452997362176 -0.02746901452738878 -0.018416278252031515 0.0004043743438861433
+  name "wooden box 5"
+  size 0.2 0.15 0.1
+  mass 1
+}
+WoodenBox {
+  translation 1.00869 0.0497451 0.96998
+  rotation 0.00020579799159352959 0.9999999591518361 -0.000198351991897685 -1.5708053071795867
+  name "wooden box 6"
+  size 0.4 0.1 0.18
+  mass 1
+}
+WoodenBox {
+  translation 0.255916 0.0488096 -1.30007
+  rotation 0.00020579799159352959 0.9999999591518361 -0.000198351991897685 -1.5708053071795867
+  name "wooden box 6(2)"
+  size 0.4 0.1 0.18
+  mass 1
+}
+WoodenBox {
+  translation 1.31283 0.0488096 -0.749435
+  rotation 0.00020579799159352959 0.9999999591518361 -0.000198351991897685 -1.5708053071795867
+  name "wooden box 6(1)"
+  size 0.2 0.1 0.3
+  mass 1
+}
+E-puck {
+  translation 0.0144172 -0.000123339 0.687541
+  rotation 0.000990422787107027 -0.9999994922749842 0.00018577533887213538 1.2254264177829557
+  controller "test_controller"
+}
+Robot {
+  translation -1.42497 -0.000227128 -1.44203
+  rotation -0.02951289234553989 0.9980347411498328 -0.0552778856631344 0.458176
+  children [
+    DEF NEEDLE HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.58
+        axis 0 1 0
+        anchor 0 0.1 0
+      }
+      device [
+        RotationalMotor {
+          name "arrow"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.1 0
+        rotation 0 -1 0 1.58
+        children [
+          DEF NEEDLE_BODY Transform {
+            rotation 1 0 0 1.57
+            children [
+              Shape {
+                appearance DEF NEEDLE_APP PBRAppearance {
+                  baseColor 1 1 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.1
+                  radius 0.005
+                }
+              }
+            ]
+          }
+          DEF NEEDLE_HEAD Transform {
+            translation 0 0 0.05
+            rotation 1 0 0 1.57
+            children [
+              Shape {
+                appearance USE NEEDLE_APP
+                geometry Cone {
+                  bottomRadius 0.01
+                  height 0.02
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    DEF SMILE Transform {
+      translation 0 0.025 -0.036
+      rotation 0.7749058546576413 0.4469456993960847 0.4469456993960847 1.82
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.722 0.29 0.29
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.018
+            radius 0.009
+            subdivision 3
+          }
+        }
+      ]
+    }
+    DEF PIVOT Transform {
+      translation 0 0.06 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.8 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.002
+          }
+        }
+      ]
+    }
+    Compass {
+      translation 0 0.05 0
+      rotation 0 1 0 1.7
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1119.999999822934
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        PositionSensor {
+          name "left wheel sensor"
+        }
+        RotationalMotor {
+          name "left wheel motor"
+          consumptionFactor 70
+        }
+      ]
+      endPoint Solid {
+        translation -0.045 0.025 0
+        rotation 1 0 0 1.7651854842456993
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.57
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius 0.025
+                }
+              }
+            ]
+          }
+        ]
+        name "left wheel"
+        boundingObject USE WHEEL
+        physics DEF PHYSICS_WHEEL Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1439.9999998229305
+        axis -1 0 0
+        anchor 0 0.025 0
+      }
+      device [
+        PositionSensor {
+          name "right wheel sensor"
+        }
+        RotationalMotor {
+          name "right wheel motor"
+          consumptionFactor 70
+        }
+      ]
+      endPoint Solid {
+        translation 0.044999999999999984 0.025 0
+        rotation -1 0 0 0.9031851301100625
+        children [
+          USE WHEEL
+        ]
+        name "right wheel"
+        boundingObject USE WHEEL
+        physics USE PHYSICS_WHEEL
+      }
+    }
+    Transform {
+      translation 0 0.0415 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.796078 0.505882 0.101961
+            roughness 1
+            metalness 0
+          }
+          geometry DEF BODY Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    DistanceSensor {
+      translation 0.02 0.063 -0.042
+      rotation 0 1 0 1.18
+      children [
+        DEF SENSOR Transform {
+          rotation 0 1 0 1.57
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.768627 1 0.27451
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.004
+                radius 0.008
+              }
+            }
+          ]
+        }
+      ]
+      name "ds0"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 -0.02
+      rotation 0 1 0 0.393
+      children [
+        USE SENSOR
+      ]
+      name "ds1"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.042 0.063 0.02
+      rotation 0 1 0 -0.39318530717958655
+      children [
+        USE SENSOR
+      ]
+      name "ds2"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation 0.02 0.063 0.042
+      rotation 0 1 0 -1.173185307179586
+      children [
+        USE SENSOR
+      ]
+      name "ds3"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 0.042
+      rotation 0 1 0 -1.963185307179586
+      children [
+        USE SENSOR
+      ]
+      name "ds4"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 0.02
+      rotation 0 1 0 -2.7531853071795864
+      children [
+        USE SENSOR
+      ]
+      name "ds5"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.042 0.063 -0.02
+      rotation 0 1 0 2.75
+      children [
+        USE SENSOR
+      ]
+      name "ds6"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    DistanceSensor {
+      translation -0.02 0.063 -0.042
+      rotation 0 1 0 1.96
+      children [
+        USE SENSOR
+      ]
+      name "ds7"
+      lookupTable [
+        0 1024 0
+        0.02 1024 0.1
+        0.08 0 0.3
+      ]
+      aperture 1
+    }
+    GPS {
+      rotation 0 1 0 1.7
+    }
+  ]
+  boundingObject DEF ROBOT_BOUNDING Transform {
+    translation 0 0.0415 0
+    children [
+      USE BODY
+    ]
+  }
+  physics DEF ROBOT_PHYSICS Physics {
+    density -1
+    mass 0.5
+  }
+  controller "bfs"
+}
+SolidBox {
+  translation 0.511388 -1.33227e-15 -0.793335
+  rotation 0 1 0 0.523599
+  size 0.1 0.2 0.3
+}
+SolidBox {
+  translation 0.830853 -1.33227e-15 -0.224898
+  rotation 0 -1 0 4.692820414042842e-06
+  name "box(1)"
+  size 0.1 0.2 0.3
+}
+SolidBox {
+  translation -0.424066 -1.33227e-15 -0.70486
+  rotation 0 1 0 -1.5708053071795867
+  name "box(2)"
+  size 0.1 0.2 0.3
+}
+SolidBox {
+  translation 0.0659612 -1.33227e-15 0.915247
+  rotation 0 1 0 -1.5708053071795867
+  name "box(3)"
+  size 0.13 0.26 0.32
+}
+SolidBox {
+  translation -0.909152 1.35186e-14 0.575103
+  rotation 9.58979e-09 -1 6.06727e-14 -3.141575307179586
+  name "box(4)"
+  size 0.1 0.2 0.3
+}
+OilBarrel {
+  translation 0 0.44 0.34
+  radius 0.1
+}
+OilBarrel {
+  translation -1.36664 0.44 0.660793
+  name "oil barrel(7)"
+  radius 0.1
+}
+OilBarrel {
+  translation 0.941214 0.44 -1.1939
+  name "oil barrel(2)"
+  radius 0.15
+}
+OilBarrel {
+  translation 0.201667 0.44 -0.255052
+  name "oil barrel(10)"
+  radius 0.15
+}
+OilBarrel {
+  translation -1.18314 0.44 0.0976614
+  name "oil barrel(9)"
+  radius 0.15
+}
+OilBarrel {
+  translation 1.31915 0.32 0.278237
+  rotation 0 1 0 4.692820414042842e-06
+  name "oil barrel(5)"
+  radius 0.11
+}
+OilBarrel {
+  translation -1.3719 0.44 -0.747276
+  name "oil barrel(3)"
+  radius 0.11
+}
+OilBarrel {
+  translation 0.385084 0.44 1.36256
+  name "oil barrel(1)"
+  radius 0.1
+}
+OilBarrel {
+  translation 1.36873 0.44 0.79336
+  name "oil barrel(6)"
+  radius 0.09
+}
+OilBarrel {
+  translation 0.64092 0.44 0.659104
+  name "oil barrel(8)"
+  radius 0.1
+}
+OilBarrel {
+  translation 0.623171 0.44 0.231532
+  name "oil barrel(4)"
+  radius 0.1
+}
