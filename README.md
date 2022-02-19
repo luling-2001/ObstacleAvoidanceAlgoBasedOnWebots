@@ -1,0 +1,2 @@
+# ObstacleAvoidanceAlgoBasedOnWebots
+基于Webots平台的简易智能机器人避障算法的实现（华南理工大学2021年智能机器人期末课程作业）
